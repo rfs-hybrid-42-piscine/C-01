@@ -50,7 +50,7 @@ The primary goal of this project is to understand how memory works under the hoo
 ### 🧪 Compilation & Testing (The Master Test)
 Unlike Shell scripts, C programs must be compiled before they can be executed. Furthermore, these exercises strictly ask for functions, not complete programs. 
 
-To make testing incredibly easy while avoiding "undefined reference" linker errors, the `tester.c` file in the root directory uses **C Preprocessor Macros** (`#ifdef`). This allows you to selectively compile and test only the exercises you want.
+To make testing incredibly easy while avoiding "undefined reference" linker errors, the **[`tester.c`](tester.c)** file in the root directory uses **C Preprocessor Macros** (`#ifdef`). This allows you to selectively compile and test only the exercises you want.
 
 1. **Clone the repository:**
    ```bash
@@ -59,7 +59,7 @@ To make testing incredibly easy while avoiding "undefined reference" linker erro
    ```
 
 2. **Test a Single Exercise:**
-   Pass the corresponding `-D EX**` flag to activate that specific test block inside `tester.c`.
+   Pass the corresponding `-D EX**` flag to activate that specific test block inside **[`tester.c`](tester.c)**.
    ```bash
    # Example for ex02:
    cc -Wall -Wextra -Werror -D EX02 tester.c ex02/ft_swap.c -o test_ex02
@@ -81,7 +81,7 @@ To make testing incredibly easy while avoiding "undefined reference" linker erro
    ./test_all
    ```
 
-> **⚠️ WARNING for 42 Students:** Do not push `tester.c` or any executable files to your final Moulinette repository! They are strictly for local testing purposes. Submitting unauthorized files will result in a 0.
+> **⚠️ WARNING for 42 Students:** Do not push **[`tester.c`](tester.c)** or any executable files to your final Moulinette repository! They are strictly for local testing purposes. Submitting unauthorized files will result in a 0.
 
 ### 🚨 The Norm
 Moulinette relies on a program called `norminette` to check if your files comply with the Norm. Every single `.c` and `.h` file must pass. 
