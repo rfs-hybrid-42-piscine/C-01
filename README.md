@@ -32,16 +32,16 @@ The primary goal of this project is to understand how memory works under the hoo
 | **[`ex00: ft_ft`](ex00)** | **Basic Pointers:** Taking a pointer to an `int` as a parameter and setting its value to `42`. <br><br>**Logic:** In C, passing a variable to a function only passes a copy of its value. To change the actual variable, you must pass its memory address (a pointer). Inside the function, we use the dereference operator (`*`) to access that address and alter the original value. |
 | **[`ex01: ft_ultimate_ft`](ex01)** | **Multiple Indirection:** Modifying an `int` through a pointer to a pointer to a pointer... (9 levels deep). <br><br>**Logic:** A brutal but effective way to understand pointer chaining. Each `*` represents a memory address pointing to another memory address. To reach the actual integer at the bottom of the chain, you must dereference it 9 times (`*********nbr`). |
 | **[`ex02: ft_swap`](ex02)** | **Pass by Reference:** Swapping the contents of two integers whose addresses are passed as parameters. <br><br>**Logic:** Because we have the addresses of the two original variables, we can safely swap their values. This requires declaring a temporary variable (`tmp`) to hold one value so it isn't overwritten and lost during the swap. |
-| **[`ex03: ft_div_mod`](ex03)** | **Returning Multiple Values:** Calculating division and modulo, and storing the results in two separate pointers. <br><br>**Logic:** A standard C function can only `return` one value. By accepting pointers as parameters (`*div` and `*mod`), a function can effectively "return" multiple values by writing the results directly into the memory of the calling function. |
+| **[`ex03: ft_div_mod`](ex03)** | **Returning Multiple Values:** Calculating division and modulo, and storing the results in two separate pointers. <br><br>**Logic:** A standard C function can only `return` one value. By accepting pointers as parameters (`*div` and `*mod`), a function can effectively "return" multiple values by writing the results directly into the memory of the calling function. Includes a safety check to prevent division by zero. |
 | **[`ex04: ft_ultimate_div_mod`](ex04)** | **Memory Overwriting:** Dividing `a` by `b` and storing the results directly back into the pointers `a` and `b`. <br><br>**Logic:** If we overwrite `a` with the division result first, we lose the original value needed to calculate the modulo. We must store the original values in temporary variables before performing the calculations and overwriting the pointers. |
 
 ### 🚀 Strings & Array Manipulation
 | Exercise | Concept & Logic |
 | :--- | :--- |
-| **[`ex05: ft_putstr`](ex05)** | **Strings in C:** Displaying a string on the standard output. <br><br>**Logic:** In C, strings do not exist as a native type; they are simply arrays of characters ending with a null byte (`\0`). To print a string, we pass a pointer to its first character and loop through the memory addresses, writing each character until we hit `\0`. |
-| **[`ex06: ft_strlen`](ex06)** | **Array Iteration:** Counting the number of characters in a string. <br><br>**Logic:** Similar to `ex05`, we iterate through the character array using a `while` loop until we encounter the null-terminator, keeping a counter of how many steps we take. |
-| **[`ex07: ft_rev_int_tab`](ex07)** | **Array Manipulation:** Reversing the order of elements in an array of integers. <br><br>**Logic:** We use two index trackers: one starting at the beginning of the array (`0`) and one at the end (`size - 1`). We swap the values at these indices using a temporary variable, then move both trackers toward the center until they meet. |
-| **[`ex08: ft_sort_int_tab`](ex08)** | **Sorting Algorithms:** Sorting an integer array in ascending order. <br><br>**Logic:** This requires implementing a basic sorting algorithm (such as Bubble Sort or Selection Sort). It involves nested loops to repeatedly step through the array, compare adjacent elements, and swap them if they are in the wrong order. |
+| **[`ex05: ft_putstr`](ex05)** | **Strings in C:** Displaying a string on the standard output. <br><br>**Logic:** In C, strings do not exist as a native type; they are simply arrays of characters ending with a null byte (`\0`). To print a string, we pass a pointer to its first character and loop through the memory addresses, writing each character until we hit `\0`. **Defensive Programming:** Includes a check (`if (str)`) to prevent segmentation faults if a `NULL` pointer is passed. |
+| **[`ex06: ft_strlen`](ex06)** | **Array Iteration:** Counting the number of characters in a string. <br><br>**Logic:** Similar to `ex05`, we iterate through the character array using a `while` loop until we encounter the null-terminator, keeping a counter of how many steps we take. Also protected against `NULL` pointers. |
+| **[`ex07: ft_rev_int_tab`](ex07)** | **Array Manipulation:** Reversing the order of elements in an array of integers. <br><br>**Logic:** We use a loop to traverse up to the midpoint of the array (`size / 2`). We swap the elements at symmetrical opposite ends (e.g., index `i` and index `size - 1 - i`) using a temporary variable. |
+| **[`ex08: ft_sort_int_tab`](ex08)** | **Sorting Algorithms:** Sorting an integer array in ascending order. <br><br>**Logic:** Implements the classic **Bubble Sort** algorithm. It involves nested loops to repeatedly step through the array, compare adjacent elements, and swap them if they are in the wrong order, "bubbling" the largest numbers to the end. Includes an early exit condition (`if (size < 2)`) to optimize performance for already sorted edge cases. |
 
 ---
 
@@ -70,8 +70,8 @@ To make testing incredibly easy while avoiding "undefined reference" linker erro
    You can chain multiple `-D` flags to test several functions at once, provided you include all their `.c` files in the command.
    ```bash
    # Example for ex05 and ex06:
-   cc -Wall -Wextra -Werror -D EX05 -D EX06 tester.c ex05/ft_putstr.c ex06/ft_strlen.c -o test_strings
-   ./test_strings
+   cc -Wall -Wextra -Werror -D EX05 -D EX06 tester.c ex05/ft_putstr.c ex06/ft_strlen.c -o test_multiple
+   ./test_multiple
    ```
 
 4. **Test ALL Exercises at Once:**
