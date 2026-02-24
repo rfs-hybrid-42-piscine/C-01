@@ -16,7 +16,7 @@ If we did not stop at the midpoint, the loop would continue past the center and 
    *Check out the source file here:* **[`ft_rev_int_tab.c`](ft_rev_int_tab.c)**
 
 2. **Testing:**
-   Use the master **[`tester.c`](../tester.c)** file provided in the root `C-00` directory. You must pass the `-D EX07` flag to the compiler to selectively activate the test for this specific exercise!
+   Use the master **[`tester.c`](../tester.c)** file provided in the root `C-01` directory. You must pass the `-D EX07` flag to the compiler to selectively activate the test for this specific exercise!
    ```bash
    cc -Wall -Wextra -Werror -D EX07 ../tester.c ft_rev_int_tab.c -o test_ex07
    ./test_ex07
