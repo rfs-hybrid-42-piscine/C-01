@@ -14,7 +14,7 @@ To reach the actual integer at the very bottom of this 9-level deep chain, you m
    *Check out the source file here:* **[`ft_ultimate_ft.c`](ft_ultimate_ft.c)**
 
 2. **Testing:**
-   Use the master **[`tester.c`](../tester.c)** file provided in the root `C-00` directory. You must pass the `-D EX01` flag to the compiler to selectively activate the test for this specific exercise!
+   Use the master **[`tester.c`](../tester.c)** file provided in the root `C-01` directory. You must pass the `-D EX01` flag to the compiler to selectively activate the test for this specific exercise!
    ```bash
    cc -Wall -Wextra -Werror -D EX01 ../tester.c ft_ultimate_ft.c -o test_ex01
    ./test_ex01
