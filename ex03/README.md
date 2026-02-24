@@ -14,7 +14,7 @@ A standard C function can only `return` a single value. However, by accepting po
    *Check out the source file here:* **[`ft_div_mod.c`](ft_div_mod.c)**
 
 2. **Testing:**
-   Use the master **[`tester.c`](../tester.c)** file provided in the root `C-00` directory. You must pass the `-D EX03` flag to the compiler to selectively activate the test for this specific exercise!
+   Use the master **[`tester.c`](../tester.c)** file provided in the root `C-01` directory. You must pass the `-D EX03` flag to the compiler to selectively activate the test for this specific exercise!
    ```bash
    cc -Wall -Wextra -Werror -D EX03 ../tester.c ft_div_mod.c -o test_ex03
    ./test_ex03
