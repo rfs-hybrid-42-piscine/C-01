@@ -16,7 +16,7 @@ To prevent data loss, we must perform both mathematical operations and store the
    *Check out the source file here:* **[`ft_ultimate_div_mod.c`](ft_ultimate_div_mod.c)**
 
 2. **Testing:**
-   Use the master **[`tester.c`](../tester.c)** file provided in the root `C-00` directory. You must pass the `-D EX04` flag to the compiler to selectively activate the test for this specific exercise!
+   Use the master **[`tester.c`](../tester.c)** file provided in the root `C-01` directory. You must pass the `-D EX04` flag to the compiler to selectively activate the test for this specific exercise!
    ```bash
    cc -Wall -Wextra -Werror -D EX04 ../tester.c ft_ultimate_div_mod.c -o test_ex04
    ./test_ex04
