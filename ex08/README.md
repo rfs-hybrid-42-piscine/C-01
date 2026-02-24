@@ -16,7 +16,7 @@ It uses nested loops to repeatedly step through the array, comparing adjacent el
    *Check out the source file here:* **[`ft_sort_int_tab.c`](ft_sort_int_tab.c)**
 
 2. **Testing:**
-   Use the master **[`tester.c`](../tester.c)** file provided in the root `C-00` directory. You must pass the `-D EX08` flag to the compiler to selectively activate the test for this specific exercise!
+   Use the master **[`tester.c`](../tester.c)** file provided in the root `C-01` directory. You must pass the `-D EX08` flag to the compiler to selectively activate the test for this specific exercise!
    ```bash
    cc -Wall -Wextra -Werror -D EX08 ../tester.c ft_sort_int_tab.c -o test_ex08
    ./test_ex08
