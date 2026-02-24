@@ -17,7 +17,7 @@ To solve this, we must declare a temporary variable (`tmp`).
    *Check out the source file here:* **[`ft_swap.c`](ft_swap.c)**
 
 2. **Testing:**
-   Use the master **[`tester.c`](../tester.c)** file provided in the root `C-00` directory. You must pass the `-D EX02` flag to the compiler to selectively activate the test for this specific exercise!
+   Use the master **[`tester.c`](../tester.c)** file provided in the root `C-01` directory. You must pass the `-D EX02` flag to the compiler to selectively activate the test for this specific exercise!
    ```bash
    cc -Wall -Wextra -Werror -D EX02 ../tester.c ft_swap.c -o test_ex02
    ./test_ex02
